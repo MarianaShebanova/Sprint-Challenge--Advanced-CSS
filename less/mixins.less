@@ -1,1 +1,32 @@
-// Mixins Here
+.flex-center() {
+    display: flex;
+    justify-content: center;
+}
+
+.change-fonts(@bg-color, @txt-color) {
+    &:hover {
+    background-color: @txt-color;
+    color: @bg-color;
+    border: 1px solid black;
+    }
+}
+
+.button-design(@bg-color, @txt-color) {
+    display: block;
+    background-color: @bg-color;
+    color: @txt-color;
+    width: 150px;
+    height: 45px;
+    font-size: 1.8rem;
+    border-radius: 10px;
+    text-align: center;
+    padding: 12px;
+    .change-fonts(black, white);
+    @media @phone {
+        padding: 20px 0;
+        margin: 5%;
+        .flex-center();
+        align-items: center;
+        width: 90%;
+    }
+}
