@@ -1,1 +1,39 @@
-// Navigation code here
+.navigation {
+    margin: 20px auto;
+    padding: 20px 0;
+    .flex-center();
+    flex-direction: column;
+    align-self: center;
+    width: 100%;
+    @media @phone {
+       background-color: #e0e0e0;
+    }
+    h1 {
+        text-align: center;
+        width: 100%;
+        @media @phone {
+          font-size: 3.4rem;
+          margin: 10%;
+          width: 50%;
+        }
+    }
+
+    nav {
+      margin-top: 10px;
+      text-align: center;
+      @media @phone {
+          margin: 5%;
+          width: 75%;
+      }
+      a {
+        margin-left: 20px;
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: black;
+        @media @phone {
+          margin: 0;
+          padding: 1%;
+        }
+      }// this closes the links 
+    }//this closes the nav
+}
